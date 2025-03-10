@@ -156,11 +156,20 @@ console.log(moviesName)
 let rating = movies.map(user => user.title +" "+user.imdbRating)
 console.log(rating)
 
-let release = movies.filter(movie => movie.year >2000 && movie.genre === "Thriller")
+let release = movies.filter(movie => movie.year >2000 && movie.genre =="Thriller")
 console.log(release)
 
-const topDramaMovies = movies.filter(movie => movie.genre === "Drama" && movie.imdbRating > 8.5);
+let topDramaMovies = movies.filter(movie => movie.genre == "Drama" && movie.imdbRating > 8.5);
 console.log(topDramaMovies);
 
-const actionMoviesWithLeo = movies.filter(movie => movie.genre === "Action" && movie.actors.includes("Leonardo DiCaprio"));
+let actionMoviesWithLeo = movies.filter(movie => movie.genre == "Action" && movie.actors.includes("Leonardo DiCaprio"));
 console.log(actionMoviesWithLeo);
+
+let dramaMoviesWithBale = movies
+    .filter(movie => movie.genre == "Drama" && movie.actors.includes("Christian Bale"));
+
+console.log(dramaMoviesWithBale);
+
+
+let dramaMoviesWithTimRobbins = movies.filter(movie => movie.genre == "Drama").map(movie => movie.actors ='Christian Bale')
+console.log(dramaMoviesWithTimRobbins);

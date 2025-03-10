@@ -148,7 +148,7 @@ const movies = [
     }
   ];
   
-console.log(movies);
+// console.log(movies);
 
 let moviesName = movies.map(user => user.title)
 console.log(moviesName)
